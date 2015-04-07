@@ -67,6 +67,78 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ARM-Linux开发框架（二）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/07/ARM-Linux开发框架（二）/" class="article-date">
+  <time datetime="2015-04-07T13:50:30.000Z" itemprop="datePublished">2015-04-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/07/ARM-Linux开发框架（二）/">ARM-Linux开发平台（二）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ARM-Linux开发平台（二）">ARM-Linux开发平台（二）</h2><hr>
+<p>首先对最近没有更新博客自我检讨一下，写博客是自我总结、提高和消化的过程，最近仅仅是在不停地去寻找食物，恰恰没有把食物消化好，罪过罪过！</p>
+<hr>
+<h3 id="开发平台更新">开发平台更新</h3><hr>
+<p>转回到正题！最近虽然课有点多，但是对于知识更加的渴望，也许因为是越得不到就越渴望吧！</p>
+<p>之前写过一个开发框架，因为最近应用一个在windows下编译软件通过TCP/IP操作arm，这就使得之前使用arm连接linux主机的方式暴露出问题，老是插拔网线，搞得人神烦！终于还是在这件神烦事情刺激之下，寻找了一个新的方式（可见问题与困难才是进步的前提呀！）。</p>
+<p>目前使用windows安装网卡，这样就多了一个网口，这样在windows下就可以通过网线对arm进行操作了。并且我们可以使用PuTTY通过telnet登录到arm的linux系统，完成基本的操作。但是这样暴露了一个问题，我宿主linux开发的程序无法方便的拷贝到arm。其实还是有解决方式的，但是限于我的电脑只有2G内存，就果断放弃使用虚拟机了，纠结呀，继续在寻找解决方法。</p>
+<h4 id="方法一">方法一</h4><p>使用windows装linux虚拟机，虚拟机完成交叉编译，在windows下通过telnet对arm-linux进行操作。这样一台电脑就可以完成工作，windows可以联网查资料，方便小白开发。</p>
+<h4 id="方法二">方法二</h4><p>那就是直接使用linux完成开发和调试工作。在linux之下也可以使用telnet连接到arm-linux，这样开发下载都可以轻松的解决。但是对于初学者来说，很多的知识还是通过windows搜索，包括办公软件，所以感觉小白还是不要选择这种方式。</p>
+<hr>
+<h2 id="ARM-Linux连接网络">ARM-Linux连接网络</h2><hr>
+<p>下午吃饭之前有点时间，无聊的就尝试使用arm-linux连接互联网。目前情况是这个样子，arm-linux使用网线与windows连接。我们windows在网络管理里有桥接和分享的选择。我想分享对于使用win7自己分享wifi的童鞋来说不陌生。其实就是将分享的对象换为另一个本地连接就好，这样arm-linux就可以连接到互联网了，最方便的测试方式就是ping一下www.baidu.com了，如果连得通就是已经连接到互联网了。但是我在使用中出现了一个问题，那就是arm-linux能够连接互联网，但是我的windows无法访问网络了，一定是某个地方出现了问题，搞定之后再来分享！</p>
+<hr>
+<p>以后要坚持写下自己的想法，养成良好的习惯，加油！RobotLiu！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/04/07/ARM-Linux开发框架（二）/" data-id="ci87f1lzx0008p0hytvjst113" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux、arm-linux嵌入式/">Linux、arm-linux嵌入式</a></li></ul>
+
+    </footer>
+  </div>
+  
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-ARM-Linux开发框架（二）" data-title="ARM-Linux开发平台（二）" data-url="undefined"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"robotliu"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</article>
+
+
+  
     <article id="post-我来评AmazingBox" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/03/28/我来评AmazingBox/" class="article-date">
@@ -101,7 +173,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/28/我来评AmazingBox/" data-id="ci7t5pe750002ichyp7xnllr2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/28/我来评AmazingBox/" data-id="ci87f1lox0002p0hykj6g08fb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,7 +232,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/24/ARM-Linux开发框架/" data-id="ci7t5pep60008ichy9h320b1t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/24/ARM-Linux开发框架/" data-id="ci87f1m0l000dp0hyb0z19426" class="article-share-link">Share</a>
       
       
     </footer>
@@ -223,7 +295,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/18/hello-world/" data-id="ci7t5pels0005ichywc29ria9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/18/hello-world/" data-id="ci87f1lwb0005p0hyzvo0opyj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -258,20 +330,34 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/智能硬件/">智能硬件</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活札记/">生活札记</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/智能硬件/">智能硬件</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活札记/">生活札记</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux、arm-linux嵌入式/">Linux、arm-linux嵌入式</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Linux、arm-linux嵌入式/" style="font-size: NaNpx;">Linux、arm-linux嵌入式</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -281,6 +367,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/04/07/ARM-Linux开发框架（二）/">ARM-Linux开发平台（二）</a>
+          </li>
         
           <li>
             <a href="/2015/03/28/我来评AmazingBox/">我来评AmazingBox</a>
