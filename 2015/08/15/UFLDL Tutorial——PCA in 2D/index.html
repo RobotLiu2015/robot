@@ -3,20 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>养成一个好的习惯 | 爱技术爱生活</title>
+  <title>机器学习之——python开发环境 | 爱技术爱生活</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="看了看写博客的时间，我对自己也是醉了，十天才发一篇博客，总是感觉自己没有时间，还是要逼一下自己。
-毕业已经接近一年的时间，看到小花园里盛开的紫罗兰，想起去年的这个时候602的兄弟们一块拍毕业照。时光飞逝，他们也都已经融入了新的环境，最主要的是他们都在赚钱，我还要过几年学生的日子（哎，又没钱买衣服啦，就解救呀！！^-^）。关于读硕士这个问题跟很多人交流过，不同的人真的有不同的认识。想想自己在实验室也">
+  <meta name="description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。
+
+PCA in 2D
+代码同时可以在我的github上找到，git@github.com:RobotLiu2015/machine-learning.git.如果需要交流可以发email到ypliurun@gmail">
 <meta property="og:type" content="article">
-<meta property="og:title" content="养成一个好的习惯">
-<meta property="og:url" content="http://yoursite.com/2015/04/17/养成一个好的习惯/index.html">
+<meta property="og:title" content="机器学习之——python开发环境">
+<meta property="og:url" content="http://yoursite.com/2015/08/15/UFLDL Tutorial——PCA in 2D/index.html">
 <meta property="og:site_name" content="爱技术爱生活">
-<meta property="og:description" content="看了看写博客的时间，我对自己也是醉了，十天才发一篇博客，总是感觉自己没有时间，还是要逼一下自己。
-毕业已经接近一年的时间，看到小花园里盛开的紫罗兰，想起去年的这个时候602的兄弟们一块拍毕业照。时光飞逝，他们也都已经融入了新的环境，最主要的是他们都在赚钱，我还要过几年学生的日子（哎，又没钱买衣服啦，就解救呀！！^-^）。关于读硕士这个问题跟很多人交流过，不同的人真的有不同的认识。想想自己在实验室也">
+<meta property="og:description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。
+
+PCA in 2D
+代码同时可以在我的github上找到，git@github.com:RobotLiu2015/machine-learning.git.如果需要交流可以发email到ypliurun@gmail">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="养成一个好的习惯">
-<meta name="twitter:description" content="看了看写博客的时间，我对自己也是醉了，十天才发一篇博客，总是感觉自己没有时间，还是要逼一下自己。
-毕业已经接近一年的时间，看到小花园里盛开的紫罗兰，想起去年的这个时候602的兄弟们一块拍毕业照。时光飞逝，他们也都已经融入了新的环境，最主要的是他们都在赚钱，我还要过几年学生的日子（哎，又没钱买衣服啦，就解救呀！！^-^）。关于读硕士这个问题跟很多人交流过，不同的人真的有不同的认识。想想自己在实验室也">
+<meta name="twitter:title" content="机器学习之——python开发环境">
+<meta name="twitter:description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。
+
+PCA in 2D
+代码同时可以在我的github上找到，git@github.com:RobotLiu2015/machine-learning.git.如果需要交流可以发email到ypliurun@gmail">
   
     <link rel="alternative" href="/atom.xml" title="爱技术爱生活" type="application/atom+xml">
   
@@ -68,14 +74,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-养成一个好的习惯" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-UFLDL Tutorial——PCA in 2D" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/04/17/养成一个好的习惯/" class="article-date">
-  <time datetime="2015-04-17T15:11:12.000Z" itemprop="datePublished">2015-04-17</time>
+    <a href="/2015/08/15/UFLDL Tutorial——PCA in 2D/" class="article-date">
+  <time datetime="2015-08-15T15:40:13.087Z" itemprop="datePublished">2015-08-15</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/生活札记/">生活札记</a>
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
   </div>
 
   </div>
@@ -86,7 +92,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      养成一个好的习惯
+      机器学习之——python开发环境
     </h1>
   
 
@@ -94,16 +100,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>看了看写博客的时间，我对自己也是醉了，十天才发一篇博客，总是感觉自己没有时间，还是要逼一下自己。</p>
-<p>毕业已经接近一年的时间，看到小花园里盛开的紫罗兰，想起去年的这个时候602的兄弟们一块拍毕业照。时光飞逝，他们也都已经融入了新的环境，最主要的是他们都在赚钱，我还要过几年学生的日子（哎，又没钱买衣服啦，就解救呀！！^-^）。关于读硕士这个问题跟很多人交流过，不同的人真的有不同的认识。想想自己在实验室也已经一年半的时间啦，现在的认识就是既来之则安之，既然已经选择了自己的路总要走下去（自己……喊着泪也要……我想看那坨的就都懂了，哇咔咔）。</p>
-<p>今晚一个师兄过来帮忙修网，他说到读一个硕士没啥意思，在科研上没有提高。确实有这样的情况，但是师傅领进门，修行靠个人。扯远了，总是感觉自己的生活很乱，总结一下还是没有计划好自己的学习生活。就好似我写的博客，总是跳来跳去，没有一个主线，我总是个乐观的人，相信将来会好的，我会是一个懂技术的文艺青年(貌似我还有点自恋哈！哇咔咔)!!!</p>
-<p>写这些就是为了缅怀一下过去的日子，憧憬一下将来的生活！说点技术的问题，说过要写一个创建博客的教程来着，女友还没有时间学习，等她有时间一定补上。最近接触了Python，希望又看到这个并且也在学习的通知一起交流！</p>
-<p>晕，还有衣服泡着呢，洗衣服去！<del>~~(&gt;_&lt;)</del>~~ </p>
+        <p>最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。</p>
+<hr>
+<h3 id="PCA_in_2D">PCA in 2D</h3><hr>
+<p>代码同时可以在我的github上找到，<a href="">git@github.com:RobotLiu2015/machine-learning.git</a>.如果需要交流可以发email到<a href="">ypliurun@gmail.com</a>.</p>
+<p><pre><code>import numpy as np<br>import matplotlib.pyplot as plt<br>import math</code></pre></p>
+<h1 id="数据要求：每列代表一个数据集，每行代表一个维度">数据要求：每列代表一个数据集，每行代表一个维度</h1><p>def zeroMean(dataMat):<br>    meanVal=np.mean(dataMat,axis=1)     #按行求均值，即求各个特征的均值<br>    meanVal = np.reshape(meanVal,(2, 1))<br>    newData=dataMat-meanVal<br>    return newData,meanVal</p>
+<h1 id="Step_0:_Load_data">Step 0: Load data</h1><p>dataMat = np.loadtxt(‘pcaData.txt’)#读取文件中的数据<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()</p>
+<h1 id="Step_1a:_Finding_the_PCA_basis">Step 1a: Finding the PCA basis</h1><p>newData,meanVal=zeroMean(dataMat)</p>
+<h1 id="print(meanVal)">print(meanVal)</h1><p>covMat = np.cov(newData,rowvar=1)<br>eigVals,eigVects=np.linalg.eig(np.mat(covMat))#求特征值和特征向量,特征向量是按列放的，即一列代表一个特征向量<br>print(eigVals,eigVects)<br>plt.plot([0,eigVects[0,0]],[0,eigVects[1,0]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.plot([0,eigVects[0,1]],[0,eigVects[1,1]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()</p>
+<h1 id="Step_1b:_Check_xRot">Step 1b: Check xRot</h1><p>eigValIndice=np.argsort(eigVals)            #对特征值从小到大排序<br>eigValIndice = eigValIndice[::-1]<br>eigVects=eigVects[:,eigValIndice]#所有的特征向量重新按照大小排布<br>Xrot = np.dot(eigVects.T,newData)<br>plt.scatter(Xrot[0],Xrot[1])<br>plt.show()</p>
+<h1 id="Step_2:_Dimension_reduce_and_replot">Step 2: Dimension reduce and replot</h1><p>U = eigVects + 0 #不能够直接赋值，因为直接赋值之后地址的值也会变化<br>U[:,1] = [0]<br>Xhat = np.dot(U,Xrot)<br>plt.scatter(Xhat[0],Xhat[1])<br>plt.show()</p>
+<h1 id="Step_3:_PCA_Whitening">Step 3: PCA Whitening</h1><p>epsilon = 0<br>eigVals = eigVals + epsilon<br>print(eigValIndice)<br>eigVals = eigVals.reshape(len(eigVals),1)<br>eigVals = eigVals[eigValIndice,:]#所有的特征值重新按照大小排布<br>Xpcawhite = Xrot/np.sqrt(eigVals)<br>plt.scatter(Xpcawhite[0],Xpcawhite[1])<br>plt.show()</p>
+<h1 id="Step_4:_ZCA_Whitening">Step 4: ZCA Whitening</h1><p>Xzcawhite = np.dot(eigVects,Xpcawhite)<br>plt.scatter(Xzcawhite[0],Xzcawhite[1])<br>plt.show()<br><br>后续会有各个章节的实验，敬请期待！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/17/养成一个好的习惯/" data-id="cidd8fguu0008lchy2yym5dwd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/08/15/UFLDL Tutorial——PCA in 2D/" data-id="cidd8fguz000dlchy6vlk408m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -112,26 +126,17 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/07/27/机器学习之——python开发环境/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          机器学习之——python开发环境
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/04/07/ARM-Linux开发框架（二）/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/07/27/机器学习之——python开发环境/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">ARM-Linux开发框架（二）</div>
+      <div class="article-nav-title">机器学习之——python开发环境</div>
     </a>
   
 </nav>
 
   
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-养成一个好的习惯" data-title="养成一个好的习惯" data-url="http://yoursite.com/2015/04/17/养成一个好的习惯/"></div>
+    <div class="ds-thread" data-thread-key="post-UFLDL Tutorial——PCA in 2D" data-title="机器学习之——python开发环境" data-url="http://yoursite.com/2015/08/15/UFLDL Tutorial——PCA in 2D/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
