@@ -3,29 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ARM-Linux开发框架（二） | 爱技术爱生活</title>
+  <title>UFLDL Tutorial——PCA in 2D | 爱技术爱生活</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先对最近没有更新博客自我检讨一下，写博客是自我总结、提高和消化的过程，最近仅仅是在不停地去寻找食物，恰恰没有把食物消化好，罪过罪过！
+  <meta name="description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。
 
-开发框架更新
-转回到正题！最近虽然课有点多，但是对于知识更加的渴望，也许因为是越得不到就越渴望吧！
-之前写过一个开发框架，因为最近应用一个在windows下编译软件通过TCP/IP操作arm，这就使得之前使用arm连接linux主机的方式暴露出问题，老是插拔网线">
+PCA in 2D
+代码同时可以在我的github上找到，git@github.com:RobotLiu2015/machine-learning.git.如果需要交流可以发email到ypliurun@gmail">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ARM-Linux开发框架（二）">
-<meta property="og:url" content="http://yoursite.com/2015/04/07/ARM-Linux开发框架（二）/index.html">
+<meta property="og:title" content="UFLDL Tutorial——PCA in 2D">
+<meta property="og:url" content="http://yoursite.com/2015/08/16/UFLDL Tutorial——PCA in 2D/index.html">
 <meta property="og:site_name" content="爱技术爱生活">
-<meta property="og:description" content="首先对最近没有更新博客自我检讨一下，写博客是自我总结、提高和消化的过程，最近仅仅是在不停地去寻找食物，恰恰没有把食物消化好，罪过罪过！
+<meta property="og:description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。
 
-开发框架更新
-转回到正题！最近虽然课有点多，但是对于知识更加的渴望，也许因为是越得不到就越渴望吧！
-之前写过一个开发框架，因为最近应用一个在windows下编译软件通过TCP/IP操作arm，这就使得之前使用arm连接linux主机的方式暴露出问题，老是插拔网线">
+PCA in 2D
+代码同时可以在我的github上找到，git@github.com:RobotLiu2015/machine-learning.git.如果需要交流可以发email到ypliurun@gmail">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ARM-Linux开发框架（二）">
-<meta name="twitter:description" content="首先对最近没有更新博客自我检讨一下，写博客是自我总结、提高和消化的过程，最近仅仅是在不停地去寻找食物，恰恰没有把食物消化好，罪过罪过！
+<meta name="twitter:title" content="UFLDL Tutorial——PCA in 2D">
+<meta name="twitter:description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。
 
-开发框架更新
-转回到正题！最近虽然课有点多，但是对于知识更加的渴望，也许因为是越得不到就越渴望吧！
-之前写过一个开发框架，因为最近应用一个在windows下编译软件通过TCP/IP操作arm，这就使得之前使用arm连接linux主机的方式暴露出问题，老是插拔网线">
+PCA in 2D
+代码同时可以在我的github上找到，git@github.com:RobotLiu2015/machine-learning.git.如果需要交流可以发email到ypliurun@gmail">
   
     <link rel="alternative" href="/atom.xml" title="爱技术爱生活" type="application/atom+xml">
   
@@ -77,14 +74,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-ARM-Linux开发框架（二）" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-UFLDL Tutorial——PCA in 2D" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/04/07/ARM-Linux开发框架（二）/" class="article-date">
-  <time datetime="2015-04-07T13:50:30.000Z" itemprop="datePublished">2015-04-07</time>
+    <a href="/2015/08/16/UFLDL Tutorial——PCA in 2D/" class="article-date">
+  <time datetime="2015-08-15T16:04:06.915Z" itemprop="datePublished">2015-08-16</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
   </div>
 
   </div>
@@ -95,7 +92,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ARM-Linux开发框架（二）
+      UFLDL Tutorial——PCA in 2D
     </h1>
   
 
@@ -103,24 +100,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>首先对最近没有更新博客自我检讨一下，写博客是自我总结、提高和消化的过程，最近仅仅是在不停地去寻找食物，恰恰没有把食物消化好，罪过罪过！</p>
+        <p>最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。</p>
 <hr>
-<h3 id="开发框架更新">开发框架更新</h3><hr>
-<p>转回到正题！最近虽然课有点多，但是对于知识更加的渴望，也许因为是越得不到就越渴望吧！</p>
-<p>之前写过一个开发框架，因为最近应用一个在windows下编译软件通过TCP/IP操作arm，这就使得之前使用arm连接linux主机的方式暴露出问题，老是插拔网线，搞得人神烦！终于还是在这件神烦事情刺激之下，寻找了一个新的方式（可见问题与困难才是进步的前提呀！）。</p>
-<p>目前使用windows安装网卡，这样就多了一个网口，这样在windows下就可以通过网线对arm进行操作了。并且我们可以使用PuTTY通过telnet登录到arm的linux系统，完成基本的操作。但是这样暴露了一个问题，我宿主linux开发的程序无法方便的拷贝到arm。其实还是有解决方式的，但是限于我的电脑只有2G内存，就果断放弃使用虚拟机了，纠结呀，继续在寻找解决方法。</p>
-<h4 id="方法一">方法一</h4><p>使用windows装linux虚拟机，虚拟机完成交叉编译，在windows下通过telnet对arm-linux进行操作。这样一台电脑就可以完成工作，windows可以联网查资料，方便小白开发。</p>
-<h4 id="方法二">方法二</h4><p>那就是直接使用linux完成开发和调试工作。在linux之下也可以使用telnet连接到arm-linux，这样开发下载都可以轻松的解决。但是对于初学者来说，很多的知识还是通过windows搜索，包括办公软件，所以感觉小白还是不要选择这种方式。</p>
-<hr>
-<h3 id="ARM-Linux连接网络">ARM-Linux连接网络</h3><hr>
-<p>下午吃饭之前有点时间，无聊的就尝试使用arm-linux连接互联网。目前情况是这个样子，arm-linux使用网线与windows连接。我们windows在网络管理里有桥接和分享的选择。我想分享对于使用win7自己分享wifi的童鞋来说不陌生。其实就是将分享的对象换为另一个本地连接就好，这样arm-linux就可以连接到互联网了，最方便的测试方式就是ping一下www.baidu.com了，如果连得通就是已经连接到互联网了。但是我在使用中出现了一个问题，那就是arm-linux能够连接互联网，但是我的windows无法访问网络了，一定是某个地方出现了问题，搞定之后再来分享！</p>
-<hr>
-<p>以后要坚持写下自己的想法，养成良好的习惯，加油！RobotLiu！</p>
+<h3 id="PCA_in_2D">PCA in 2D</h3><hr>
+<p>代码同时可以在我的github上找到，<a href="">git@github.com:RobotLiu2015/machine-learning.git</a>.如果需要交流可以发email到<a href="">ypliurun@gmail.com</a>.</p>
+<p><pre><code><br>import numpy as np<br>import matplotlib.pyplot as plt<br>import math<br>#数据要求：每列代表一个数据集，每行代表一个维度<br>def zeroMean(dataMat):<br>    meanVal=np.mean(dataMat,axis=1)     #按行求均值，即求各个特征的均值<br>    meanVal = np.reshape(meanVal,(2, 1))<br>    newData=dataMat-meanVal<br>    return newData,meanVal<br># Step 0: Load data<br>dataMat = np.loadtxt(‘pcaData.txt’)#读取文件中的数据<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()<br># Step 1a: Finding the PCA basis<br>newData,meanVal=zeroMean(dataMat)<br>#print(meanVal)<br>covMat = np.cov(newData,rowvar=1)<br>eigVals,eigVects=np.linalg.eig(np.mat(covMat))#求特征值和特征向量,特征向量是按列放的，即一列代表一个特征向量<br>print(eigVals,eigVects)<br>plt.plot([0,eigVects[0,0]],[0,eigVects[1,0]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.plot([0,eigVects[0,1]],[0,eigVects[1,1]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()<br># Step 1b: Check xRot<br>eigValIndice=np.argsort(eigVals)            #对特征值从小到大排序<br>eigValIndice = eigValIndice[::-1]<br>eigVects=eigVects[:,eigValIndice]#所有的特征向量重新按照大小排布<br>Xrot = np.dot(eigVects.T,newData)<br>plt.scatter(Xrot[0],Xrot[1])<br>plt.show()<br># Step 2: Dimension reduce and replot<br>U = eigVects + 0 #不能够直接赋值，因为直接赋值之后地址的值也会变化<br>U[:,1] = [0]<br>Xhat = np.dot(U,Xrot)<br>plt.scatter(Xhat[0],Xhat[1])<br>plt.show()<br># Step 3: PCA Whitening<br>epsilon = 0<br>eigVals = eigVals + epsilon<br>print(eigValIndice)<br>eigVals = eigVals.reshape(len(eigVals),1)<br>eigVals = eigVals[eigValIndice,:]#所有的特征值重新按照大小排布<br>Xpcawhite = Xrot/np.sqrt(eigVals)<br>plt.scatter(Xpcawhite[0],Xpcawhite[1])<br>plt.show()<br># Step 4: ZCA Whitening<br>Xzcawhite = np.dot(eigVects,Xpcawhite)<br>plt.scatter(Xzcawhite[0],Xzcawhite[1])<br>plt.show()<br></code></pre><br>后续会有各个章节的实验，敬请期待！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/07/ARM-Linux开发框架（二）/" data-id="cidd95swc000d10hyfm19atx9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/08/16/UFLDL Tutorial——PCA in 2D/" data-id="cidd982k10000fwhymuw7ktzn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,26 +118,17 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/04/17/养成一个好的习惯/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          养成一个好的习惯
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/03/28/我来评AmazingBox/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/07/27/机器学习之——python开发环境/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">我来评AmazingBox</div>
+      <div class="article-nav-title">机器学习之——python开发环境</div>
     </a>
   
 </nav>
 
   
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-ARM-Linux开发框架（二）" data-title="ARM-Linux开发框架（二）" data-url="http://yoursite.com/2015/04/07/ARM-Linux开发框架（二）/"></div>
+    <div class="ds-thread" data-thread-key="post-UFLDL Tutorial——PCA in 2D" data-title="UFLDL Tutorial——PCA in 2D" data-url="http://yoursite.com/2015/08/16/UFLDL Tutorial——PCA in 2D/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
