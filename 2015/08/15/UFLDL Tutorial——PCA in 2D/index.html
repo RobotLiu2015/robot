@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>机器学习之——python开发环境 | 爱技术爱生活</title>
+  <title>爱技术爱生活</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。
 
 PCA in 2D
 代码同时可以在我的github上找到，git@github.com:RobotLiu2015/machine-learning.git.如果需要交流可以发email到ypliurun@gmail">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习之——python开发环境">
+<meta property="og:title" content="爱技术爱生活">
 <meta property="og:url" content="http://yoursite.com/2015/08/15/UFLDL Tutorial——PCA in 2D/index.html">
 <meta property="og:site_name" content="爱技术爱生活">
 <meta property="og:description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。
@@ -18,7 +18,7 @@ PCA in 2D
 PCA in 2D
 代码同时可以在我的github上找到，git@github.com:RobotLiu2015/machine-learning.git.如果需要交流可以发email到ypliurun@gmail">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习之——python开发环境">
+<meta name="twitter:title" content="爱技术爱生活">
 <meta name="twitter:description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。
 
 PCA in 2D
@@ -77,7 +77,7 @@ PCA in 2D
         <section id="main"><article id="post-UFLDL Tutorial——PCA in 2D" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/08/15/UFLDL Tutorial——PCA in 2D/" class="article-date">
-  <time datetime="2015-08-15T15:40:13.087Z" itemprop="datePublished">2015-08-15</time>
+  <time datetime="2015-08-15T15:45:43.674Z" itemprop="datePublished">2015-08-15</time>
 </a>
     
   <div class="article-category">
@@ -88,16 +88,6 @@ PCA in 2D
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      机器学习之——python开发环境
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。</p>
@@ -105,7 +95,7 @@ PCA in 2D
 <h3 id="PCA_in_2D">PCA in 2D</h3><hr>
 <p>代码同时可以在我的github上找到，<a href="">git@github.com:RobotLiu2015/machine-learning.git</a>.如果需要交流可以发email到<a href="">ypliurun@gmail.com</a>.</p>
 <p><pre><code>import numpy as np<br>import matplotlib.pyplot as plt<br>import math</code></pre></p>
-<h1 id="数据要求：每列代表一个数据集，每行代表一个维度">数据要求：每列代表一个数据集，每行代表一个维度</h1><p>def zeroMean(dataMat):<br>    meanVal=np.mean(dataMat,axis=1)     #按行求均值，即求各个特征的均值<br>    meanVal = np.reshape(meanVal,(2, 1))<br>    newData=dataMat-meanVal<br>    return newData,meanVal</p>
+<p>#数据要求：每列代表一个数据集，每行代表一个维度<br>def zeroMean(dataMat):<br>    meanVal=np.mean(dataMat,axis=1)     #按行求均值，即求各个特征的均值<br>    meanVal = np.reshape(meanVal,(2, 1))<br>    newData=dataMat-meanVal<br>    return newData,meanVal</p>
 <h1 id="Step_0:_Load_data">Step 0: Load data</h1><p>dataMat = np.loadtxt(‘pcaData.txt’)#读取文件中的数据<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()</p>
 <h1 id="Step_1a:_Finding_the_PCA_basis">Step 1a: Finding the PCA basis</h1><p>newData,meanVal=zeroMean(dataMat)</p>
 <h1 id="print(meanVal)">print(meanVal)</h1><p>covMat = np.cov(newData,rowvar=1)<br>eigVals,eigVects=np.linalg.eig(np.mat(covMat))#求特征值和特征向量,特征向量是按列放的，即一列代表一个特征向量<br>print(eigVals,eigVects)<br>plt.plot([0,eigVects[0,0]],[0,eigVects[1,0]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.plot([0,eigVects[0,1]],[0,eigVects[1,1]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()</p>
@@ -117,7 +107,7 @@ PCA in 2D
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/15/UFLDL Tutorial——PCA in 2D/" data-id="cidd8fguz000dlchy6vlk408m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/08/15/UFLDL Tutorial——PCA in 2D/" data-id="cidd8kqmo000doghyo9oelkwx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -136,7 +126,7 @@ PCA in 2D
 
   
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-UFLDL Tutorial——PCA in 2D" data-title="机器学习之——python开发环境" data-url="http://yoursite.com/2015/08/15/UFLDL Tutorial——PCA in 2D/"></div>
+    <div class="ds-thread" data-thread-key="post-UFLDL Tutorial——PCA in 2D" data-title="" data-url="http://yoursite.com/2015/08/15/UFLDL Tutorial——PCA in 2D/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -186,7 +176,7 @@ PCA in 2D
       <ul>
         
           <li>
-            <a href="/2015/08/15/UFLDL Tutorial——PCA in 2D/">机器学习之——python开发环境</a>
+            <a href="/2015/08/15/UFLDL Tutorial——PCA in 2D/">(no title)</a>
           </li>
         
           <li>

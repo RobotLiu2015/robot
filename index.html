@@ -70,7 +70,7 @@
     <article id="post-UFLDL Tutorial——PCA in 2D" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/08/15/UFLDL Tutorial——PCA in 2D/" class="article-date">
-  <time datetime="2015-08-15T15:40:13.087Z" itemprop="datePublished">2015-08-15</time>
+  <time datetime="2015-08-15T15:45:43.674Z" itemprop="datePublished">2015-08-15</time>
 </a>
     
   <div class="article-category">
@@ -81,16 +81,6 @@
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/15/UFLDL Tutorial——PCA in 2D/">机器学习之——python开发环境</a>
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。</p>
@@ -98,7 +88,7 @@
 <h3 id="PCA_in_2D">PCA in 2D</h3><hr>
 <p>代码同时可以在我的github上找到，<a href="">git@github.com:RobotLiu2015/machine-learning.git</a>.如果需要交流可以发email到<a href="">ypliurun@gmail.com</a>.</p>
 <p><pre><code>import numpy as np<br>import matplotlib.pyplot as plt<br>import math</code></pre></p>
-<h1 id="数据要求：每列代表一个数据集，每行代表一个维度">数据要求：每列代表一个数据集，每行代表一个维度</h1><p>def zeroMean(dataMat):<br>    meanVal=np.mean(dataMat,axis=1)     #按行求均值，即求各个特征的均值<br>    meanVal = np.reshape(meanVal,(2, 1))<br>    newData=dataMat-meanVal<br>    return newData,meanVal</p>
+<p>#数据要求：每列代表一个数据集，每行代表一个维度<br>def zeroMean(dataMat):<br>    meanVal=np.mean(dataMat,axis=1)     #按行求均值，即求各个特征的均值<br>    meanVal = np.reshape(meanVal,(2, 1))<br>    newData=dataMat-meanVal<br>    return newData,meanVal</p>
 <h1 id="Step_0:_Load_data">Step 0: Load data</h1><p>dataMat = np.loadtxt(‘pcaData.txt’)#读取文件中的数据<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()</p>
 <h1 id="Step_1a:_Finding_the_PCA_basis">Step 1a: Finding the PCA basis</h1><p>newData,meanVal=zeroMean(dataMat)</p>
 <h1 id="print(meanVal)">print(meanVal)</h1><p>covMat = np.cov(newData,rowvar=1)<br>eigVals,eigVects=np.linalg.eig(np.mat(covMat))#求特征值和特征向量,特征向量是按列放的，即一列代表一个特征向量<br>print(eigVals,eigVects)<br>plt.plot([0,eigVects[0,0]],[0,eigVects[1,0]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.plot([0,eigVects[0,1]],[0,eigVects[1,1]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()</p>
@@ -110,14 +100,14 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/15/UFLDL Tutorial——PCA in 2D/" data-id="cidd8fguz000dlchy6vlk408m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/08/15/UFLDL Tutorial——PCA in 2D/" data-id="cidd8kqmo000doghyo9oelkwx" class="article-share-link">Share</a>
       
       
     </footer>
   </div>
   
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-UFLDL Tutorial——PCA in 2D" data-title="机器学习之——python开发环境" data-url="undefined"></div>
+    <div class="ds-thread" data-thread-key="post-UFLDL Tutorial——PCA in 2D" data-title="" data-url="undefined"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -193,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/27/机器学习之——python开发环境/" data-id="cidd8fgoj0002lchyi13t33nl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/27/机器学习之——python开发环境/" data-id="cidd8kos20002oghy4j9ozl6h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -254,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/17/养成一个好的习惯/" data-id="cidd8fguu0008lchy2yym5dwd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/04/17/养成一个好的习惯/" data-id="cidd8kovd0008oghyjv4v2flw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -323,7 +313,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/07/ARM-Linux开发框架（二）/" data-id="cidd8fgv1000flchyiar2wx0p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/04/07/ARM-Linux开发框架（二）/" data-id="cidd8kqmq000foghylcdqyvmx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -383,7 +373,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/28/我来评AmazingBox/" data-id="cidd8fgue0005lchyzs5tivs0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/28/我来评AmazingBox/" data-id="cidd8kosf0005oghywrer29px" class="article-share-link">Share</a>
       
       
     </footer>
@@ -442,7 +432,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/24/ARM-Linux开发框架/" data-id="cidd8fgw0000ilchy0qkrp8ju" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/24/ARM-Linux开发框架/" data-id="cidd8kqmt000ioghyjgupsc4p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -505,7 +495,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/08/hello-world/" data-id="cidd8fgux000blchyp7bpw956" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/08/hello-world/" data-id="cidd8kqmi000boghyrjh74i49" class="article-share-link">Share</a>
       
       
     </footer>
@@ -565,7 +555,7 @@
       <ul>
         
           <li>
-            <a href="/2015/08/15/UFLDL Tutorial——PCA in 2D/">机器学习之——python开发环境</a>
+            <a href="/2015/08/15/UFLDL Tutorial——PCA in 2D/">(no title)</a>
           </li>
         
           <li>
