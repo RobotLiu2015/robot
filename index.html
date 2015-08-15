@@ -67,65 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-UFLDL Tutorial——PCA in 2D" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/08/15/UFLDL Tutorial——PCA in 2D/" class="article-date">
-  <time datetime="2015-08-15T15:45:43.674Z" itemprop="datePublished">2015-08-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。</p>
-<hr>
-<h3 id="PCA_in_2D">PCA in 2D</h3><hr>
-<p>代码同时可以在我的github上找到，<a href="">git@github.com:RobotLiu2015/machine-learning.git</a>.如果需要交流可以发email到<a href="">ypliurun@gmail.com</a>.</p>
-<p><pre><code>import numpy as np<br>import matplotlib.pyplot as plt<br>import math</code></pre></p>
-<p>#数据要求：每列代表一个数据集，每行代表一个维度<br>def zeroMean(dataMat):<br>    meanVal=np.mean(dataMat,axis=1)     #按行求均值，即求各个特征的均值<br>    meanVal = np.reshape(meanVal,(2, 1))<br>    newData=dataMat-meanVal<br>    return newData,meanVal</p>
-<h1 id="Step_0:_Load_data">Step 0: Load data</h1><p>dataMat = np.loadtxt(‘pcaData.txt’)#读取文件中的数据<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()</p>
-<h1 id="Step_1a:_Finding_the_PCA_basis">Step 1a: Finding the PCA basis</h1><p>newData,meanVal=zeroMean(dataMat)</p>
-<h1 id="print(meanVal)">print(meanVal)</h1><p>covMat = np.cov(newData,rowvar=1)<br>eigVals,eigVects=np.linalg.eig(np.mat(covMat))#求特征值和特征向量,特征向量是按列放的，即一列代表一个特征向量<br>print(eigVals,eigVects)<br>plt.plot([0,eigVects[0,0]],[0,eigVects[1,0]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.plot([0,eigVects[0,1]],[0,eigVects[1,1]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()</p>
-<h1 id="Step_1b:_Check_xRot">Step 1b: Check xRot</h1><p>eigValIndice=np.argsort(eigVals)            #对特征值从小到大排序<br>eigValIndice = eigValIndice[::-1]<br>eigVects=eigVects[:,eigValIndice]#所有的特征向量重新按照大小排布<br>Xrot = np.dot(eigVects.T,newData)<br>plt.scatter(Xrot[0],Xrot[1])<br>plt.show()</p>
-<h1 id="Step_2:_Dimension_reduce_and_replot">Step 2: Dimension reduce and replot</h1><p>U = eigVects + 0 #不能够直接赋值，因为直接赋值之后地址的值也会变化<br>U[:,1] = [0]<br>Xhat = np.dot(U,Xrot)<br>plt.scatter(Xhat[0],Xhat[1])<br>plt.show()</p>
-<h1 id="Step_3:_PCA_Whitening">Step 3: PCA Whitening</h1><p>epsilon = 0<br>eigVals = eigVals + epsilon<br>print(eigValIndice)<br>eigVals = eigVals.reshape(len(eigVals),1)<br>eigVals = eigVals[eigValIndice,:]#所有的特征值重新按照大小排布<br>Xpcawhite = Xrot/np.sqrt(eigVals)<br>plt.scatter(Xpcawhite[0],Xpcawhite[1])<br>plt.show()</p>
-<h1 id="Step_4:_ZCA_Whitening">Step 4: ZCA Whitening</h1><p>Xzcawhite = np.dot(eigVects,Xpcawhite)<br>plt.scatter(Xzcawhite[0],Xzcawhite[1])<br>plt.show()<br><br>后续会有各个章节的实验，敬请期待！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/15/UFLDL Tutorial——PCA in 2D/" data-id="cidd8kqmo000doghyo9oelkwx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-UFLDL Tutorial——PCA in 2D" data-title="" data-url="undefined"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"robotliu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</article>
-
-
-  
     <article id="post-机器学习之——python开发环境" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/07/27/机器学习之——python开发环境/" class="article-date">
@@ -183,7 +124,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/27/机器学习之——python开发环境/" data-id="cidd8kos20002oghy4j9ozl6h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/27/机器学习之——python开发环境/" data-id="cidd8tv6p00029chy4z1ee0cd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -244,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/17/养成一个好的习惯/" data-id="cidd8kovd0008oghyjv4v2flw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/04/17/养成一个好的习惯/" data-id="cidd8twp200089chykz5yh96a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -313,7 +254,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/07/ARM-Linux开发框架（二）/" data-id="cidd8kqmq000foghylcdqyvmx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/04/07/ARM-Linux开发框架（二）/" data-id="cidd8txqy000d9chy9l8cjnk9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -373,7 +314,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/28/我来评AmazingBox/" data-id="cidd8kosf0005oghywrer29px" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/28/我来评AmazingBox/" data-id="cidd8tve300059chyq28hsiym" class="article-share-link">Share</a>
       
       
     </footer>
@@ -432,7 +373,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/24/ARM-Linux开发框架/" data-id="cidd8kqmt000ioghyjgupsc4p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/24/ARM-Linux开发框架/" data-id="cidd8txrr000g9chyz5az4r1e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -495,7 +436,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/08/hello-world/" data-id="cidd8kqmi000boghyrjh74i49" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/08/hello-world/" data-id="cidd8txc4000b9chyxigeb1a0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -530,7 +471,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/智能硬件/">智能硬件</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活札记/">生活札记</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/智能硬件/">智能硬件</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活札记/">生活札记</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -543,7 +484,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -553,10 +494,6 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2015/08/15/UFLDL Tutorial——PCA in 2D/">(no title)</a>
-          </li>
         
           <li>
             <a href="/2015/07/27/机器学习之——python开发环境/">机器学习之——python开发环境</a>
@@ -572,6 +509,10 @@
         
           <li>
             <a href="/2015/03/28/我来评AmazingBox/">我来评AmazingBox</a>
+          </li>
+        
+          <li>
+            <a href="/2015/03/24/ARM-Linux开发框架/">ARM-Linux开发框架</a>
           </li>
         
       </ul>
