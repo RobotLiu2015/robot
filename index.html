@@ -67,6 +67,128 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-UFLDL Tutorial——PCA in 2D" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/31/UFLDL Tutorial——PCA in 2D/" class="article-date">
+  <time datetime="2015-08-31T13:03:50.653Z" itemprop="datePublished">2015-08-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/31/UFLDL Tutorial——PCA in 2D/">UFLDL Tutorial——PCA in 2D</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题,希望跟同样学习的小伙伴交流。</p>
+<p>这一章是对于前面学习知识的一个总结，这一章能够独立完成也就说明前面掌握的还是可得啦！后面的练习其实就是对于前面理论知识的一个巩固，但是说实话虽然这一章的题目是自学习，但是我始终感觉前面使用稀疏自动编码还是对于数据做了一个预处理，后面还是应用了监督学习的算法，不过最后计算的结果要比之之前要好的多。在这里遇到了memoryerror的问题，我使用的是4G内存的电脑，在进行运算时候把所有其他的软件都关闭，终于不出现这样子的问题了，最后我还是决定去linux试一试，不能把开发环境搞好了就不用了，那真的是太浪费了。关于对于这个习题的理解有一篇文章还是说的很不错的，我贴出地址来，需要的还是可以读一下的 <a href="">http://blog.csdn.net/richard2357/article/details/18229483</a> （貌似我不会输公式的哈，我也是比较懒，既然人家写了很好的解决办法我就借用一下啦）。</p>
+<hr>
+<h3 id="关于运行时间">关于运行时间</h3><hr>
+<p>之前我总是偷工减料，使用较少的训练数据做训练，也能训练出结果，我自己就美其名为“节约时间”就不用所有的数据进行训练，这次不行喽！我这次使用了所有的数据，出现了内存错误，当然程序运行时间也是相当的长，终于体会到室友跑一个程序的空闲还跑到别人宿舍打游戏的感觉了。这个练习控制时间的地方主要是两个迭代的地方，如果将迭代的测试降低一点那样程序的运行时间就相应的短了，当然最后的准确率肯定会降低，这里要是节约时间的话，可以将前面稀疏编码训练之后的数据存储起来，下次再测试结果的时候就不用再浪费训练数据的时间了。代码还是在我的github上就可以找到，搜一下就OK啦！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/08/31/UFLDL Tutorial——PCA in 2D/" data-id="cidzxtv9z000ixwhy3jy595u0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-UFLDL Tutorial——PCA in 2D" data-title="UFLDL Tutorial——PCA in 2D" data-url="undefined"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"robotliu"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</article>
+
+
+  
+    <article id="post-Self-Taught Learning" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/31/Self-Taught Learning/" class="article-date">
+  <time datetime="2015-08-30T16:00:00.000Z" itemprop="datePublished">2015-08-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/31/Self-Taught Learning/">UFLDL Tutorial——Self-Taught Learning</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。</p>
+<hr>
+<h3 id="PCA_in_2D">PCA in 2D</h3><hr>
+<p>代码同时可以在我的github上找到，<a href="">git@github.com:RobotLiu2015/machine-learning.git</a>.如果需要交流可以发email到<a href="">ypliurun@gmail.com</a>.</p>
+<p><pre><code><br>import numpy as np<br>import matplotlib.pyplot as plt<br>import math<br>#数据要求：每列代表一个数据集，每行代表一个维度<br>def zeroMean(dataMat):<br>    meanVal=np.mean(dataMat,axis=1)     #按行求均值，即求各个特征的均值<br>    meanVal = np.reshape(meanVal,(2, 1))<br>    newData=dataMat-meanVal<br>    return newData,meanVal<br># Step 0: Load data<br>dataMat = np.loadtxt(‘pcaData.txt’)#读取文件中的数据<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()<br># Step 1a: Finding the PCA basis<br>newData,meanVal=zeroMean(dataMat)<br>#print(meanVal)<br>covMat = np.cov(newData,rowvar=1)<br>eigVals,eigVects=np.linalg.eig(np.mat(covMat))#求特征值和特征向量,特征向量是按列放的，即一列代表一个特征向量<br>print(eigVals,eigVects)<br>plt.plot([0,eigVects[0,0]],[0,eigVects[1,0]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.plot([0,eigVects[0,1]],[0,eigVects[1,1]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()<br># Step 1b: Check xRot<br>eigValIndice=np.argsort(eigVals)            #对特征值从小到大排序<br>eigValIndice = eigValIndice[::-1]<br>eigVects=eigVects[:,eigValIndice]#所有的特征向量重新按照大小排布<br>Xrot = np.dot(eigVects.T,newData)<br>plt.scatter(Xrot[0],Xrot[1])<br>plt.show()<br># Step 2: Dimension reduce and replot<br>U = eigVects + 0 #不能够直接赋值，因为直接赋值之后地址的值也会变化<br>U[:,1] = [0]<br>Xhat = np.dot(U,Xrot)<br>plt.scatter(Xhat[0],Xhat[1])<br>plt.show()<br># Step 3: PCA Whitening<br>epsilon = 0<br>eigVals = eigVals + epsilon<br>print(eigValIndice)<br>eigVals = eigVals.reshape(len(eigVals),1)<br>eigVals = eigVals[eigValIndice,:]#所有的特征值重新按照大小排布<br>Xpcawhite = Xrot/np.sqrt(eigVals)<br>plt.scatter(Xpcawhite[0],Xpcawhite[1])<br>plt.show()<br># Step 4: ZCA Whitening<br>Xzcawhite = np.dot(eigVects,Xpcawhite)<br>plt.scatter(Xzcawhite[0],Xzcawhite[1])<br>plt.show()<br></code></pre><br>后续会有各个章节的实验，敬请期待！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/08/31/Self-Taught Learning/" data-id="cidzxtva5000mxwhy7z54qskk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-Self-Taught Learning" data-title="UFLDL Tutorial——Self-Taught Learning" data-url="undefined"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"robotliu"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</article>
+
+
+  
     <article id="post-Softmax Regression" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/08/28/Softmax Regression/" class="article-date">
@@ -101,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/28/Softmax Regression/" data-id="cidzwq6gq000k14hytowp7z5j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/08/28/Softmax Regression/" data-id="cidzxtva2000kxwhyyaec7q7f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -167,7 +289,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/24/linux下PyCharm安装/" data-id="cidzwq531000e14hyewd7ckql" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/08/24/linux下PyCharm安装/" data-id="cidzxtv9m000exwhympa8e66z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -227,7 +349,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/20/ubuntu14.04联网问题/" data-id="cidzwq52x000b14hyri5lsr0k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/08/20/ubuntu14.04联网问题/" data-id="cidzxtsoi000bxwhy3vkzyesb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -235,67 +357,6 @@
   
     <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key="post-ubuntu14.04联网问题" data-title="ubuntu14.04联网问题" data-url="undefined"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"robotliu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</article>
-
-
-  
-    <article id="post-UFLDL Tutorial——PCA in 2D" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/08/16/UFLDL Tutorial——PCA in 2D/" class="article-date">
-  <time datetime="2015-08-15T16:04:06.915Z" itemprop="datePublished">2015-08-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/16/UFLDL Tutorial——PCA in 2D/">UFLDL Tutorial——PCA in 2D</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。</p>
-<hr>
-<h3 id="PCA_in_2D">PCA in 2D</h3><hr>
-<p>代码同时可以在我的github上找到，<a href="">git@github.com:RobotLiu2015/machine-learning.git</a>.如果需要交流可以发email到<a href="">ypliurun@gmail.com</a>.</p>
-<p><pre><code><br>import numpy as np<br>import matplotlib.pyplot as plt<br>import math<br>#数据要求：每列代表一个数据集，每行代表一个维度<br>def zeroMean(dataMat):<br>    meanVal=np.mean(dataMat,axis=1)     #按行求均值，即求各个特征的均值<br>    meanVal = np.reshape(meanVal,(2, 1))<br>    newData=dataMat-meanVal<br>    return newData,meanVal<br># Step 0: Load data<br>dataMat = np.loadtxt(‘pcaData.txt’)#读取文件中的数据<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()<br># Step 1a: Finding the PCA basis<br>newData,meanVal=zeroMean(dataMat)<br>#print(meanVal)<br>covMat = np.cov(newData,rowvar=1)<br>eigVals,eigVects=np.linalg.eig(np.mat(covMat))#求特征值和特征向量,特征向量是按列放的，即一列代表一个特征向量<br>print(eigVals,eigVects)<br>plt.plot([0,eigVects[0,0]],[0,eigVects[1,0]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.plot([0,eigVects[0,1]],[0,eigVects[1,1]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()<br># Step 1b: Check xRot<br>eigValIndice=np.argsort(eigVals)            #对特征值从小到大排序<br>eigValIndice = eigValIndice[::-1]<br>eigVects=eigVects[:,eigValIndice]#所有的特征向量重新按照大小排布<br>Xrot = np.dot(eigVects.T,newData)<br>plt.scatter(Xrot[0],Xrot[1])<br>plt.show()<br># Step 2: Dimension reduce and replot<br>U = eigVects + 0 #不能够直接赋值，因为直接赋值之后地址的值也会变化<br>U[:,1] = [0]<br>Xhat = np.dot(U,Xrot)<br>plt.scatter(Xhat[0],Xhat[1])<br>plt.show()<br># Step 3: PCA Whitening<br>epsilon = 0<br>eigVals = eigVals + epsilon<br>print(eigValIndice)<br>eigVals = eigVals.reshape(len(eigVals),1)<br>eigVals = eigVals[eigValIndice,:]#所有的特征值重新按照大小排布<br>Xpcawhite = Xrot/np.sqrt(eigVals)<br>plt.scatter(Xpcawhite[0],Xpcawhite[1])<br>plt.show()<br># Step 4: ZCA Whitening<br>Xzcawhite = np.dot(eigVects,Xpcawhite)<br>plt.scatter(Xzcawhite[0],Xzcawhite[1])<br>plt.show()<br></code></pre><br>后续会有各个章节的实验，敬请期待！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/16/UFLDL Tutorial——PCA in 2D/" data-id="cidzwq53n000i14hylm55na9n" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-UFLDL Tutorial——PCA in 2D" data-title="UFLDL Tutorial——PCA in 2D" data-url="undefined"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -371,7 +432,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/27/机器学习之——python开发环境/" data-id="cidzwq4vz000214hywpgzvbyq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/27/机器学习之——python开发环境/" data-id="cidzxtsjm0002xwhy8kli56sc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -432,7 +493,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/17/养成一个好的习惯/" data-id="cidzwq52o000814hywuu4fv32" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/04/17/养成一个好的习惯/" data-id="cidzxtsko0008xwhy2qvbv98v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -501,7 +562,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/07/ARM-Linux开发框架（二）/" data-id="cidzwq7gx000m14hytpym0p6z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/04/07/ARM-Linux开发框架（二）/" data-id="cidzxtva7000oxwhy5zqspqll" class="article-share-link">Share</a>
       
       
     </footer>
@@ -561,7 +622,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/28/我来评AmazingBox/" data-id="cidzwq50m000514hyswwzg1vu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/28/我来评AmazingBox/" data-id="cidzxtskd0005xwhybzmzwh02" class="article-share-link">Share</a>
       
       
     </footer>
@@ -620,7 +681,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/24/ARM-Linux开发框架/" data-id="cidzwq7h0000o14hyj1e0lxi3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/24/ARM-Linux开发框架/" data-id="cidzxtvaa000qxwhy185gim52" class="article-share-link">Share</a>
       
       
     </footer>
@@ -646,69 +707,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/03/08/hello-world/" class="article-date">
-  <time datetime="2015-03-08T00:48:00.000Z" itemprop="datePublished">2015-03-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/生活札记/">生活札记</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/08/hello-world/">Hello World “记我的第一篇博客”</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>用了课余时间和睡觉之前的时间终于把博客搭建起来，此时敲下这些文字的时候还有点小激动呢！之前在CSDN待过一段时间，读硕士之后也就将写博文的事情搁置下来了，回头看看人最难战胜的还是自己。15年的开始终因感情的问题混乱了几周的日子，新年的计划也没有写，真的是罪过罪过！打算写博文还是在知乎上看到一篇“我为什么写博客”的文章，作为一个理工科的汉子，一直想做一个文艺的技术青年，也总要激励下自己多将自己的生活感受记录下来，最终还是促成了博客的搭建。</p>
-<h2 id="我为什么写博客">我为什么写博客</h2><hr>
-<p>灵感总是一瞬即逝，生活中一些美好的想法如果不记录下来，时间长了也就忘记了，写博客就是为了记录下生活中关于技术、关于生活、关于工作的想法。当然还有一个非常重要的原因，我想有自己搭建的这样一个平台，不管有没有人关注，我想我都会是坚持下去。当然也有人讲到博客是一个为了职业发展的名片，这是一个其次的目的了，我想只要坚持激励自己去记录生活、技术的点点滴滴，即使没有这个名片也能找到自己心仪的工作。</p>
-<h2 id="博客的内容">博客的内容</h2><hr>
-<p>首先要说说个人情况，本科学习自动化，硕士阶段是控制科学与工程方向，课题是机器人相关。并且我对机器学习和智能硬件有比较感兴趣，平时总有自己的一些想法。所以呢，在博客里就写一些对本专业知识的理解，对目前一些众筹和市面上的认识，还有对机器学习的学习，希望有相同兴趣的人一起交流（额，貌似目前没有把评论加上哈，争取周末之前加上^-^）。</p>
-<h2 id="关于博客的构建">关于博客的构建</h2><hr>
-<p>该博客的应用hexo搭建，应用其他人设计的模板。具体的呢，还不是还清楚，还在学习阶段，网上有很多的教程，但是对于非专业的孩纸来说有些还是不好理解，还是要再熟悉一下，争取明白之后写出来让小白用户搭建起来更简单！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/08/hello-world/" data-id="cidzwq53k000g14hyzg6mlyhe" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-hello-world" data-title="Hello World “记我的第一篇博客”" data-url="undefined"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"robotliu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</article>
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </section>
         
@@ -718,7 +720,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/智能硬件/">智能硬件</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活札记/">生活札记</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/智能硬件/">智能硬件</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活札记/">生活札记</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -731,7 +733,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -743,6 +745,14 @@
       <ul>
         
           <li>
+            <a href="/2015/08/31/UFLDL Tutorial——PCA in 2D/">UFLDL Tutorial——PCA in 2D</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/31/Self-Taught Learning/">UFLDL Tutorial——Self-Taught Learning</a>
+          </li>
+        
+          <li>
             <a href="/2015/08/28/Softmax Regression/">UFLDL Tutorial——Softmax Regression</a>
           </li>
         
@@ -752,14 +762,6 @@
         
           <li>
             <a href="/2015/08/20/ubuntu14.04联网问题/">ubuntu14.04联网问题</a>
-          </li>
-        
-          <li>
-            <a href="/2015/08/16/UFLDL Tutorial——PCA in 2D/">UFLDL Tutorial——PCA in 2D</a>
-          </li>
-        
-          <li>
-            <a href="/2015/07/27/机器学习之——python开发环境/">机器学习之——python开发环境</a>
           </li>
         
       </ul>
