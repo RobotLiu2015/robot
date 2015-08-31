@@ -5,24 +5,18 @@
   
   <title>UFLDL Tutorial——Self-Taught Learning | 爱技术爱生活</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。
-
-PCA in 2D
-代码同时可以在我的github上找到，git@github.com:RobotLiu2015/machine-learning.git.如果需要交流可以发email到ypliurun@gmail">
+  <meta name="description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题,希望跟同样学习的小伙伴交流。
+这一章是对于前面学习知识的一个总结，这一章能够独立完成也就说明前面掌握的还是可得啦！后面的练习其实就是对于前面理论知识的一个巩固，但是说实话虽然这一章的题目是自学习，但是我始终感觉前面使用稀疏自动编码还是对于数据做了一个预处理，后面还是应">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UFLDL Tutorial——Self-Taught Learning">
 <meta property="og:url" content="http://yoursite.com/2015/08/31/Self-Taught Learning/index.html">
 <meta property="og:site_name" content="爱技术爱生活">
-<meta property="og:description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。
-
-PCA in 2D
-代码同时可以在我的github上找到，git@github.com:RobotLiu2015/machine-learning.git.如果需要交流可以发email到ypliurun@gmail">
+<meta property="og:description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题,希望跟同样学习的小伙伴交流。
+这一章是对于前面学习知识的一个总结，这一章能够独立完成也就说明前面掌握的还是可得啦！后面的练习其实就是对于前面理论知识的一个巩固，但是说实话虽然这一章的题目是自学习，但是我始终感觉前面使用稀疏自动编码还是对于数据做了一个预处理，后面还是应">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UFLDL Tutorial——Self-Taught Learning">
-<meta name="twitter:description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。
-
-PCA in 2D
-代码同时可以在我的github上找到，git@github.com:RobotLiu2015/machine-learning.git.如果需要交流可以发email到ypliurun@gmail">
+<meta name="twitter:description" content="最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题,希望跟同样学习的小伙伴交流。
+这一章是对于前面学习知识的一个总结，这一章能够独立完成也就说明前面掌握的还是可得啦！后面的练习其实就是对于前面理论知识的一个巩固，但是说实话虽然这一章的题目是自学习，但是我始终感觉前面使用稀疏自动编码还是对于数据做了一个预处理，后面还是应">
   
     <link rel="alternative" href="/atom.xml" title="爱技术爱生活" type="application/atom+xml">
   
@@ -100,16 +94,16 @@ PCA in 2D
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题。这里直接把代码贴出来，希望跟同样学习的小伙伴交流。</p>
+        <p>最近在学习UFLDL Tutorial，官网给的例程是Matlab的，因为一直使用python，所以就用python做后面的练习题,希望跟同样学习的小伙伴交流。</p>
+<p>这一章是对于前面学习知识的一个总结，这一章能够独立完成也就说明前面掌握的还是可得啦！后面的练习其实就是对于前面理论知识的一个巩固，但是说实话虽然这一章的题目是自学习，但是我始终感觉前面使用稀疏自动编码还是对于数据做了一个预处理，后面还是应用了监督学习的算法，不过最后计算的结果要比之之前要好的多。在这里遇到了memoryerror的问题，我使用的是4G内存的电脑，在进行运算时候把所有其他的软件都关闭，终于不出现这样子的问题了，最后我还是决定去linux试一试，不能把开发环境搞好了就不用了，那真的是太浪费了。关于对于这个习题的理解有一篇文章还是说的很不错的，我贴出地址来，需要的还是可以读一下的 <a href="">http://blog.csdn.net/richard2357/article/details/18229483</a> （貌似我不会输公式的哈，我也是比较懒，既然人家写了很好的解决办法我就借用一下啦）。</p>
 <hr>
-<h3 id="PCA_in_2D">PCA in 2D</h3><hr>
-<p>代码同时可以在我的github上找到，<a href="">git@github.com:RobotLiu2015/machine-learning.git</a>.如果需要交流可以发email到<a href="">ypliurun@gmail.com</a>.</p>
-<p><pre><code><br>import numpy as np<br>import matplotlib.pyplot as plt<br>import math<br>#数据要求：每列代表一个数据集，每行代表一个维度<br>def zeroMean(dataMat):<br>    meanVal=np.mean(dataMat,axis=1)     #按行求均值，即求各个特征的均值<br>    meanVal = np.reshape(meanVal,(2, 1))<br>    newData=dataMat-meanVal<br>    return newData,meanVal<br># Step 0: Load data<br>dataMat = np.loadtxt(‘pcaData.txt’)#读取文件中的数据<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()<br># Step 1a: Finding the PCA basis<br>newData,meanVal=zeroMean(dataMat)<br>#print(meanVal)<br>covMat = np.cov(newData,rowvar=1)<br>eigVals,eigVects=np.linalg.eig(np.mat(covMat))#求特征值和特征向量,特征向量是按列放的，即一列代表一个特征向量<br>print(eigVals,eigVects)<br>plt.plot([0,eigVects[0,0]],[0,eigVects[1,0]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.plot([0,eigVects[0,1]],[0,eigVects[1,1]],color=”blue”, linewidth=1.0, linestyle=”-“)<br>plt.scatter(dataMat[0],dataMat[1])<br>plt.show()<br># Step 1b: Check xRot<br>eigValIndice=np.argsort(eigVals)            #对特征值从小到大排序<br>eigValIndice = eigValIndice[::-1]<br>eigVects=eigVects[:,eigValIndice]#所有的特征向量重新按照大小排布<br>Xrot = np.dot(eigVects.T,newData)<br>plt.scatter(Xrot[0],Xrot[1])<br>plt.show()<br># Step 2: Dimension reduce and replot<br>U = eigVects + 0 #不能够直接赋值，因为直接赋值之后地址的值也会变化<br>U[:,1] = [0]<br>Xhat = np.dot(U,Xrot)<br>plt.scatter(Xhat[0],Xhat[1])<br>plt.show()<br># Step 3: PCA Whitening<br>epsilon = 0<br>eigVals = eigVals + epsilon<br>print(eigValIndice)<br>eigVals = eigVals.reshape(len(eigVals),1)<br>eigVals = eigVals[eigValIndice,:]#所有的特征值重新按照大小排布<br>Xpcawhite = Xrot/np.sqrt(eigVals)<br>plt.scatter(Xpcawhite[0],Xpcawhite[1])<br>plt.show()<br># Step 4: ZCA Whitening<br>Xzcawhite = np.dot(eigVects,Xpcawhite)<br>plt.scatter(Xzcawhite[0],Xzcawhite[1])<br>plt.show()<br></code></pre><br>后续会有各个章节的实验，敬请期待！</p>
+<h3 id="关于运行时间">关于运行时间</h3><hr>
+<p>之前我总是偷工减料，使用较少的训练数据做训练，也能训练出结果，我自己就美其名为“节约时间”就不用所有的数据进行训练，这次不行喽！我这次使用了所有的数据，出现了内存错误，当然程序运行时间也是相当的长，终于体会到室友跑一个程序的空闲还跑到别人宿舍打游戏的感觉了。这个练习控制时间的地方主要是两个迭代的地方，如果将迭代的测试降低一点那样程序的运行时间就相应的短了，当然最后的准确率肯定会降低，这里要是节约时间的话，可以将前面稀疏编码训练之后的数据存储起来，下次再测试结果的时候就不用再浪费训练数据的时间了。代码还是在我的github上就可以找到，搜一下就OK啦！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/31/Self-Taught Learning/" data-id="cidzxzi1y000mkshyif552bii" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/08/31/Self-Taught Learning/" data-id="cidzy5han000mq0hysdjm7oak" class="article-share-link">Share</a>
       
       
     </footer>
